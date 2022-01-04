@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    </head>
+  <body>
+    <!-- As if this Glitch were a typical HTML CodePen... -->    
+    
+
+    
+    <!-- Use components defined in separate files. -->
+<!--    <script src="video-helpers.js"></script>-->
+
+    <!-- Specify our scene. -->
+    <a-scene>
+        <a-assets>
+        <!-- Single source video. -->
+        <video preload="auto" crossorigin="anonymous" autoplay loop="true" id="dancer" 
+               src="https://firebasestorage.googleapis.com/v0/b/yelloskye-fly-responsibly.appspot.com/o/dancer.mp4?alt=media&token=8c246eab-fa6b-4df5-b927-a7c7fb69deec">       
+        </video>
+        </a-assets>
+            
+<!--            https://ucarecdn.com/fadab25d-0b3a-45f7-8ef5-85318e92a261/-->
+        
+        <a-video src="#dancer" width="3" height="1.5" position="0 0 -20"></a-video>
+
+        
+<!--        <a-entity environment="preset: forest; dressingAmount: 500"></a-entity>-->
+    
+        <!-- Wait for the video to load. -->
+        
+        
+
+       
+    </a-scene>
+    
+  </body>
+</html>

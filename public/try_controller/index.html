@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+
+    <script src="https://dist.3d.io/3dio-js/1.x.x/3dio.min.js"></script>
+    
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.8.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.8.2/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+
+
+
+
+<script src="modernizr-custom.js"></script>
+<script src="controller.js"></script>
+
+<script src="run.js"></script>
+
+
+</head>
+  <body>
+
+    <script>
+        function collisionHandler (event) {
+  console.log('Entity collided with', event);
+}
+
+
+        AFRAME.registerComponent('log', {
+  schema: {type: 'string'},
+
+  init: function () {
+    var stringToLog = this.data;
+    console.log(stringToLog);
+    document.querySelector('#c').addEventListener("buttonchanged", collisionHandler)
+  }
+});
+
+    </script>
+
+
+    <p id='gamepad-info'></p>
+
+
+    <!-- <a-scene physics >
+      <a-box position="-1 4 -3" rotation="0 45 0" color="#4CC3D9" dynamic-body></a-box>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" static-body></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+
+      <a-entity id="rig" position="0.15008 0 1.9265" touch-controls="enabled: false" movement-controls="enabled: true; fly: true" keyboard-controls="debug: false; enabled: true" gamepad-controls="debug: true; controller: 0; enabled: true" movement-controls>
+        <a-entity camera
+                  position="0 1.6 0"
+                  look-controls="pointerLockEnabled: true">
+        </a-entity>
+      </a-entity>
+
+      <a-entity id="c" log="Hello controller" tracked-controls="controller: 0; idPrefix: Unknown"></a-entity>
+
+
+
+</a-entity>
+    </a-scene> -->
+  
+
+  
+</body>
+</html>
